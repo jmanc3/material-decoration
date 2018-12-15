@@ -80,8 +80,8 @@ static int s_decoCount = 0;
 static QColor s_shadowColor(33, 33, 33);
 static QSharedPointer<KDecoration2::DecorationShadow> s_cachedShadow;
 
-static qreal s_titleBarOpacityActive = 0.9;
-static qreal s_titleBarOpacityInactive = 1.0;
+static qreal s_titleBarOpacityActive = 0.8;
+static qreal s_titleBarOpacityInactive = 0.8;
 
 Decoration::Decoration(QObject *parent, const QVariantList &args)
     : KDecoration2::Decoration(parent, args)
@@ -258,6 +258,14 @@ void Decoration::updateShadow()
         shadowSize + s_shadowParams.offset.x(),
         shadowSize + s_shadowParams.offset.y());
     const QRect innerRect = rect - padding;
+    
+    // Draw outline.
+    QPen outLine (QColor(100,100,100));
+    outLine.setWidth(2);
+    outLine.setJoinStyle(Qt::MiterJoin);
+    painter.setPen(outLine);
+    painter.setBrush(Qt::NoBrush);
+    painter.drawRect(innerRect);
 
     painter.setPen(Qt::NoPen);
     painter.setBrush(Qt::black);
