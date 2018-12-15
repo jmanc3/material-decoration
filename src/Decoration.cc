@@ -77,7 +77,7 @@ const CompositeShadowParams s_shadowParams = CompositeShadowParams(
 } // anonymous namespace
 
 static int s_decoCount = 0;
-static QColor s_shadowColor(33, 33, 33);
+static QColor s_shadowColor(0, 0, 0);
 static QSharedPointer<KDecoration2::DecorationShadow> s_cachedShadow;
 
 static qreal s_titleBarOpacityActive = 0.8;
