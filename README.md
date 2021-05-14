@@ -1,21 +1,35 @@
 ![Demo](data/window.png)
 
-## material-decoration
+## Material decorations for KDE
 
 Material-ish window decoration theme for KWin.
 
 ### Installation
 
-##### Prerequisites
+#### Prerequisites
 
+* a compiler like (g++ or gcc)
+* make
+* cmake
+* extra-cmake-modules
 * KDecoration2
+* Qt5
+* KF5Config
+* Qt5Core
+* KF5CoreAddons
+* Qt5Gui
+* KF5GuiAddons
+* KF5WindowSystem
+* KF5
 
-##### Building from source
+#### Building from source
+
+Download or clone this repository and then run the following commands on the terminal inside that directory.
 
 ```
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+cmake -DCMAKE_BUILD_TYPE=Release ../
 make
 sudo make install
 ```
