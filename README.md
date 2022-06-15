@@ -22,6 +22,12 @@ Material-ish window decoration theme for KWin.
 * KF5WindowSystem
 * KF5
 
+#### Installing compilation dependencies
+
+```
+sudo xbps-install ecm-devel extra-cmake-modules qt5-devel kdecoration-devel kconfig-devel kguiaddons-devel kwindowsystem-devel
+```
+
 #### Building from source
 
 Download or clone this repository and then run the following commands on the terminal inside that directory.
